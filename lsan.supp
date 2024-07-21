@@ -1,0 +1,3 @@
+# lsan suppressions
+# ignore 64bytes leak from _PyObject_GC_New
+leak:_PyObject_GC_New
