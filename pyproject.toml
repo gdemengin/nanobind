@@ -1,7 +1,14 @@
 [build-system]
-requires = ["setuptools>=42", "wheel", "scikit-build", "cmake>=3.17", "ninja", "typing_extensions"]
-build-backend = "setuptools.build_meta"
+requires = ["scikit-build-core==0.9.6", "nanobind==2.1.0"]
+build-backend = "scikit_build_core.build"
 
+[project]
+name = "nf"
+version = "1.0.0"
 
-[tool.pytest.ini_options]
-testpaths = [ "tests" ]
+[tool.scikit-build]
+build-dir = "build"
+wheel.py-api = "cp312"
+cmake.version = "==3.29.6"
+#cmake.build-type = "Debug"
+cmake.verbose = true
