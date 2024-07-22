@@ -4,6 +4,7 @@ minimum reproducer environment for leak with nb 2.0.0 + check the fix removes th
 docker build -t ndarray-leak-mre .
 docker run -v $(pwd):/mnt/docker -itd --rm --name ndarray-leak-mre ndarray-leak-mre
 docker exec -it ndarray-leak-mre /bin/bash
+cd /mnt/docker
 ./reproduce.sh
 ```
 
